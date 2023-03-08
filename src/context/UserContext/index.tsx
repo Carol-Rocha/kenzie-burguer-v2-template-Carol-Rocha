@@ -27,7 +27,7 @@ const UserProvider = ({ children }: iUserProviderProps) => {
       localStorage.setItem('@USERID', response.data.user.id);
       navigate('/shop');
     } catch (error) {
-      toast.error('Email e/ou senha incorretos!');
+      toast.error('Nome e/ou senha incorretos!');
     }
   };
 

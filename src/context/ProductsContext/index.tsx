@@ -1,16 +1,23 @@
 import { createContext, useContext } from 'react';
-import { api } from '../../services/api';
 import { iProductProviderProps, iProductsProvider } from './types';
+import { api } from '../../services/api';
 
 const productsContext = createContext({} as iProductsProvider);
 
 const ProductsProvider = ({ children }: iProductProviderProps) => {
   const getProducts = async () => {
+    const token = localStorage.getItem('@TOKEN');
+
     try {
-      const response = await api.get(`/products`);
+      const response = await api.get(`/products`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
       return response.data;
     } catch (error) {
-      console.log(error);
+      return error;
     }
   };
 

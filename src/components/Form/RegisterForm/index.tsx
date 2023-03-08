@@ -5,8 +5,11 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { registerSchema } from './registerSchema';
 import { iRegisterFormData } from './types';
+import { useUserContext } from '../../../context/UserContext';
 
 const RegisterForm = () => {
+  const { registerUser } = useUserContext();
+
   const {
     register,
     handleSubmit,
@@ -17,6 +20,7 @@ const RegisterForm = () => {
   });
 
   const onSubmit = (data: iRegisterFormData) => {
+    registerUser(data);
     reset();
   };
 
