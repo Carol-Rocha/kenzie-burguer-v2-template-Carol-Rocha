@@ -7,3 +7,5 @@ Ao acessar o Kenzie-Burguer, o usuário pode fazer login para ter uma experiênc
 O Kenzie-Burguer foi um projeto desafiador que me permitiu aprimorar minhas habilidades em desenvolvimento web e aplicar diversas tecnologias populares. Estou orgulhosa do resultado alcançado e animada para continuar aprendendo e aprimorando minhas habilidades nesse emocionante campo.
 
 Sinta-se à vontade para fazer fork, colaborar ou entrar em contato comigo para qualquer dúvida ou feedback.
+
+ 🚀 Acesse o link do projeto: https://kenzie-burguer-flax.vercel.app/
